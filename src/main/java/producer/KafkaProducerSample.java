@@ -25,8 +25,8 @@ public class KafkaProducerSample {
 
         //adding ssl properties
         properties.setProperty("security.protocol", "SSL");
-        properties.setProperty("ssl.keystore.password", "T1Bacct1");
-        properties.setProperty("ssl.truststore.password", "T1Bacct1");
+        properties.setProperty("ssl.keystore.password", "*");
+        properties.setProperty("ssl.truststore.password", "*");
         properties.setProperty("ssl.keystore.location", "C:/Users/C845601/Desktop/certs/keystore_server_dev.jks");
         properties.setProperty("ssl.truststore.location", "C:/Users/C845601/Desktop/certs/truststore_server_dev.jks");
         //default value of
@@ -48,5 +48,6 @@ public class KafkaProducerSample {
         producer.flush();
 
         //flush and close producer
+        producer.close();
     }
 }
