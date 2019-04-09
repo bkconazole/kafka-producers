@@ -12,11 +12,11 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-public class KafkaConsumerSample {
+public class KafkaConsumerSimple {
 
     public static void main(String[] args) {
 
-        Logger logger = LoggerFactory.getLogger(KafkaConsumerSample.class.getName());
+        Logger logger = LoggerFactory.getLogger(KafkaConsumerSimple.class.getName());
 
         String auto_offset_reset = "earliest";      //earliest, none, latest
         String topic = "com.bnsf.kiv.brook.test.concurrency3";
@@ -33,8 +33,8 @@ public class KafkaConsumerSample {
 
         //create ssl properties
         properties.setProperty("security.protocol", "SSL");
-        properties.setProperty("ssl.keystore.password", "*");
-        properties.setProperty("ssl.truststore.password", "*");
+        properties.setProperty("ssl.keystore.password", "T1Bacct1");
+        properties.setProperty("ssl.truststore.password", "T1Bacct1");
         properties.setProperty("ssl.keystore.location", "C:/Users/C845601/Desktop/certs/keystore_server_dev.jks");
         properties.setProperty("ssl.truststore.location", "C:/Users/C845601/Desktop/certs/truststore_server_dev.jks");
 
