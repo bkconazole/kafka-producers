@@ -18,7 +18,7 @@ public class KafkaConsumerSimple {
 
         Logger logger = LoggerFactory.getLogger(KafkaConsumerSimple.class.getName());
 
-        String auto_offset_reset = "earliest";      //earliest, none, latest
+        String auto_offset_reset = "latest";      //earliest, none, latest
         String topic = "com.bnsf.kiv.brook.test.concurrency3";
         String group_id = "sample-consumer";
         String bootstrap_servers = "ftwlxkafd001:9092";
